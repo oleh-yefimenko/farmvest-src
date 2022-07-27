@@ -1,0 +1,27 @@
+// Заголовки, общие БЄМ блоки и прочее...
+.title {
+	font-weight: 700;
+	font-size: 70px;
+	@include adaptiveValue('font-size', 70, 40);
+	line-height: math.div(70, 78);
+	// .title_section
+	&_section {
+	}
+	// .title_block
+	&_block {
+	}
+	// .title__mark
+	&__mark {
+		color: $colorGreen;
+	}
+}
+
+.text {
+	line-height: 180%;
+}
+
+.image-block {
+	// .image-block__image
+	&__image {
+	}
+}

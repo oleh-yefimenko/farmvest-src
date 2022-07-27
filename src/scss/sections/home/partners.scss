@@ -1,0 +1,29 @@
+.partners {
+	padding: rem(10) 0;
+	// .partners__container-big
+	&__container-big {
+	}
+	// .partners__slider
+	&__slider {
+	}
+	// .partners__wrapper
+	&__wrapper {
+	}
+	// .partners__slide
+	&__slide {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 100%;
+	}
+	// .partners__slide-item
+	&__slide-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	// .partners__slide-image
+	&__slide-image {
+		max-width: 100%;
+	}
+}
