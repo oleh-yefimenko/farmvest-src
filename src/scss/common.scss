@@ -1,9 +1,24 @@
 // Заголовки, общие БЄМ блоки и прочее...
+.heading {
+	@media (max-width: $mobile) {
+		text-align: center;
+	}
+	// .heading__title
+	&__title {
+		@include adaptiveValue('margin-bottom', 32, 20);
+	}
+	// .heading__text
+	&__text {
+	}
+}
+
 .title {
 	font-weight: 700;
-	font-size: 70px;
-	@include adaptiveValue('font-size', 70, 40);
+	@include adaptiveValue('font-size', 80, 40);
 	line-height: math.div(70, 78);
+	// .title_general
+	&_general {
+	}
 	// .title_section
 	&_section {
 	}
@@ -18,12 +33,16 @@
 
 .text {
 	line-height: 180%;
+	// .text_mark
+	&_mark {
+	}
 }
 
 .block-image {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	min-width: 50%;
 	@include adaptiveValue('padding-top', 45, 10);
 	@include adaptiveValue('padding-bottom', 45, 10);
 	@include adaptiveValue('padding-right', 45, 10);
@@ -72,20 +91,22 @@
 		&_left-1,
 		&_left-2 {
 			&::before {
-				top: 0;
+				@include adaptiveValue('width', 640, 300);
+				@include adaptiveValue('height', 640, 300);
+				bottom: 0;
 				left: 0;
 			}
 		}
 		// .block-image__circle_left-1
 		&_left-1 {
 			&::before {
-				transform: translate(calc(50% - rem(17)), -25%);
+				transform: translate(-40%, 35%);
 			}
 		}
 		// .block-image__circle_left-2
 		&_left-2 {
 			&::before {
-				transform: translate(calc(50% - rem(17)), -15%);
+				transform: translate(-43%, 25%);
 			}
 		}
 		// .block-image__circle_center-1 and .block-image__circle_center-2

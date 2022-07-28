@@ -1,5 +1,6 @@
 .partners {
-	padding: rem(10) 0;
+	@include adaptiveValue('padding-top', 90, 25);
+	@include adaptiveValue('padding-bottom', 100, 25);
 	// .partners__container-big
 	&__container-big {
 	}

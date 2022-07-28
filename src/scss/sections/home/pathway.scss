@@ -1,0 +1,38 @@
+.pathway {
+	// .pathway__container-big
+	&__container-big {
+		@include adaptiveValue('padding-top', 100, 25);
+		@include adaptiveValue('padding-bottom', 100, 25);
+	}
+	// .pathway__container
+	&__container {
+		display: flex;
+	}
+	// .pathway__image-block
+	&__image-block {
+		@media (max-width: $mobile) {
+			width: 90%;
+			margin: 0 auto;
+		}
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
+		@media (min-width: $mobile) {
+			flex: 0 0 53%;
+		}
+		@media (min-width: $mobile) and (max-width: $tablet) {
+			align-items: flex-start;
+		}
+	}
+	// .pathway__content
+	&__content {
+		@include adaptiveValue('padding-left', 126, 10, 1920, 768, 2);
+	}
+	// .pathway__heading
+	&__heading {
+		// in .pathway__heading .title
+		.title {
+			font-size: rem(75);
+		}
+	}
+}

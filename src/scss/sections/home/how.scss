@@ -1,20 +1,6 @@
 .how {
-	@include adaptiveValue('padding-top', 220, 50);
-	@include adaptiveValue('padding-bottom', 220, 50);
-	// .how__title
-	&__title {
-		@include adaptiveValue('margin-bottom', 32, 20);
-		@media (max-width: $mobile) {
-			text-align: center;
-		}
-	}
-	// .how__text
-	&__text {
-		@include adaptiveValue('margin-bottom', 48, 25);
-		@media (max-width: $mobile) {
-			text-align: center;
-		}
-	}
+	@include adaptiveValue('padding-top', 100, 25);
+	@include adaptiveValue('padding-bottom', 100, 25);
 	// .how__container-big
 	&__container-big {
 	}
@@ -30,23 +16,16 @@
 		flex: 1 1 50%;
 		@include adaptiveValue('padding-right', 96, 10, 1920, 768, 2);
 	}
+	// .how__heading
+	&__heading {
+		@include adaptiveValue('margin-bottom', 48, 25);
+	}
 	// .how__steps
 	&__steps {
 		@include adaptiveValue('margin-bottom', 70, 30, 768, 320, 1);
 	}
 	// .how__image-block
 	&__image-block {
-		// top: 0;
-		// right: 0;
-		// z-index: 1;
-		// .block-image::before
-		&::before {
-			transform: translate(calc(50% - rem(17)), -25%);
-		}
-		// .block-image::after
-		&::after {
-			transform: translate(calc(50% - rem(17)), -15%);
-		}
 		@media (max-width: $mobile) {
 			width: 90%;
 			margin: 0 auto;

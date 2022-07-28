@@ -5,7 +5,7 @@
 	// .home-promo__container-big
 	&__container-big {
 		@include adaptiveValue('padding-top', 250, 100);
-		@include adaptiveValue('padding-bottom', 210, 50);
+		@include adaptiveValue('padding-bottom', 90, 25);
 		position: relative;
 		z-index: 1;
 	}
