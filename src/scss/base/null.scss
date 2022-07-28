@@ -9,10 +9,12 @@
 *:after {
 	box-sizing: border-box;
 }
+
 :focus,
 :active {
 	// outline: none;
 	// outline: 1px solid yellow;
+	outline-color: yellow;
 }
 a:focus,
 a:active {
