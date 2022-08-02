@@ -1,0 +1,82 @@
+.reviews {
+	@include adaptiveValue('padding-top', 100, 50);
+	@include adaptiveValue('padding-bottom', 100, 50);
+	// .reviews__container-big
+	&__container-big {
+	}
+	// .reviews__container
+	&__container {
+	}
+	// .reviews__heading
+	&__heading {
+		@include adaptiveValue('margin-bottom', 48, 30);
+	}
+	// .reviews__items
+	&__items {
+		@include adaptiveValue('padding-bottom', 48, 20);
+		@media (min-width: $tablet) {
+			display: flex;
+			justify-content: space-between;
+			@include adaptiveValue('column-gap', 48, 48);
+		}
+	}
+	// .reviews__item
+	&__item {
+		min-height: rem(377);
+		@media (max-width: $tablet) {
+			@include adaptiveValue('margin-bottom', 48, 20);
+		}
+		@media (min-width: $tablet) {
+			flex: 0 1 50%;
+		}
+	}
+	// .reviews__button
+	&__button {
+		min-width: rem(221);
+		margin: 0 auto;
+		@media (max-width: $mobileSmall) {
+			width: 90%;
+		}
+	}
+}
+
+.item-reviews {
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 20px;
+	overflow: hidden;
+	@media (min-width: $mobileSmall) {
+		display: flex;
+	}
+	// .item-reviews__wrapper-image
+	&__wrapper-image {
+		@media (max-width: $mobileSmall) {
+			padding-bottom: 80%;
+			margin-bottom: rem(20);
+		}
+		@media (min-width: $mobileSmall) {
+			flex: 0 0 math.div(302, 686) * 100%;
+		}
+	}
+	// .item-reviews__wrapper-image-ibg
+	&__wrapper-image-ibg {
+	}
+	// .item-reviews__image
+	&__image {
+		min-width: rem(202);
+	}
+	// .item-reviews__body
+	&__body {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue('padding', 32, 10);
+		flex: 1 1 auto;
+	}
+	// .item-reviews__text
+	&__text {
+		flex: 1 1 auto;
+		@include adaptiveValue('margin-bottom', 32, 20);
+	}
+	// .item-reviews__name
+	&__name {
+	}
+}
