@@ -1,0 +1,57 @@
+.download {
+	@include adaptiveValue('padding-top', 100, 25);
+	@include adaptiveValue('padding-bottom', 100, 25);
+	// .download__container-big
+	&__container-big {
+	}
+	// .download__container
+	&__container {
+		@include adaptiveValue('padding-top', 72, 40);
+		@include adaptiveValue('padding-bottom', 64, 30);
+		position: relative;
+		background: rgba(255, 255, 255, 0.07);
+		border-radius: 20px;
+		overflow: hidden;
+	}
+	// .download__title
+	&__title {
+		margin: 0 auto;
+		@include adaptiveValue('margin-bottom', 49, 30);
+		max-width: rem(760);
+		@include adaptiveValue('font-size', 70, 26);
+	}
+	// .download__apps
+	&__apps {
+		@media (min-width: em(430)) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include adaptiveValue('column-gap', 24, 10);
+		}
+	}
+	// .download__app
+	&__app {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: rem(5) rem(15);
+		height: rem(60);
+		background: #000;
+		border-radius: rem(10);
+		@media (max-width: em(430)) {
+			margin: 0 auto;
+			&:not(:last-child) {
+				margin-bottom: rem(20);
+			}
+			width: 90%;
+		}
+	}
+	// .download__image-block
+	&__image-block {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}

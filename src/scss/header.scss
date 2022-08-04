@@ -56,8 +56,8 @@
 		@include adaptiveValue('max-width', 310, 270, 1920, 992, 1);
 		position: relative;
 		z-index: 11;
-		@media (max-width: $tablet) {
-			flex: 0 1 auto;
+		@media (min-width: $tablet) {
+			flex: 1 1 auto;
 		}
 	}
 	// .header__logo

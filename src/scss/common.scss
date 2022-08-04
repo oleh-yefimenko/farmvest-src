@@ -70,12 +70,8 @@
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		top: 0;
-		left: 0;
 		&::before {
 			content: '';
-			@include adaptiveValue('width', 585, 250);
-			@include adaptiveValue('height', 585, 250);
 			position: absolute;
 			z-index: 1;
 			border: 1px solid $mainColor;
@@ -85,6 +81,8 @@
 		&_right-1,
 		&_right-2 {
 			&::before {
+				@include adaptiveValue('width', 585, 250);
+				@include adaptiveValue('height', 585, 250);
 				top: 0;
 				right: 0;
 			}
@@ -126,21 +124,24 @@
 		// .block-image__circle_center-1 and .block-image__circle_center-2
 		&_center-1,
 		&_center-2 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			&::before {
-				top: center;
-				left: center;
+				@include adaptiveValue('width', 640, 400);
+				@include adaptiveValue('height', 640, 400);
 			}
 		}
 		// .block-image__circle_center-1
 		&_center-1 {
 			&::before {
-				transform: translate(calc(50% - rem(17)), -25%);
+				transform: translate(0, -5%);
 			}
 		}
 		// .block-image__circle_left-2
 		&_center-2 {
 			&::before {
-				transform: translate(calc(50% - rem(17)), -15%);
+				transform: translate(0, 15%);
 			}
 		}
 	}

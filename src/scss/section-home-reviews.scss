@@ -16,18 +16,20 @@
 		@include adaptiveValue('padding-bottom', 48, 20);
 		@media (min-width: $tablet) {
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: space-between;
-			@include adaptiveValue('column-gap', 48, 48);
+			gap: rem(48);
 		}
 	}
 	// .reviews__item
 	&__item {
 		min-height: rem(377);
+
 		@media (max-width: $tablet) {
 			@include adaptiveValue('margin-bottom', 48, 20);
 		}
 		@media (min-width: $tablet) {
-			flex: 0 1 50%;
+			flex: 0 1 calc(50% - rem(24));
 		}
 	}
 	// .reviews__button

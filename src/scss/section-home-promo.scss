@@ -34,6 +34,12 @@
 	}
 	// .home-promo__form
 	&__form {
+		@media (max-width: em(400)) {
+			flex-direction: column;
+			row-gap: rem(20);
+			width: 100%;
+			max-width: 100%;
+		}
 	}
 	// .home-promo__icons
 	&__icons {
